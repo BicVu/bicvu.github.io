@@ -1,8 +1,9 @@
-@font-face{
-	scr: url("bicvu.github.io/fonts/MapRoman-Condensed.woff2");
-	font-family: "MapRoman-Condensed", Arial, sans-serif;
+@font-face {
+    src: url('fonts/MapRoman-Condensed.woff2') format("woff2"),
+         url('fonts/MapRoman-Condensed.woff') format("woff");;
+    font-family: 'MapRomanWeb-Condensed';
 	/* Fall back fonts separated by commas ends with semi-colon. */
-	font-weight: bold;
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -19,7 +20,7 @@
 } */
 
 body{
-	font-family: "MapRoman-Condensed";
+	font-family: "MapRomanWeb-Condensed";
 /* 	padding: calc(1rem + 2%); */
 	background-color: #fff4d6;
 	font-weight: bold;
