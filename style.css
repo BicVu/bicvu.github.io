@@ -1,5 +1,5 @@
 @font-face{
-	scr: url("bicvu.github.io/fonts/MapRoman-Condensed.woff2");
+	scr: url("/fonts/MapRoman-Condensed.woff2");
 	font-family: "MapRoman-Condensed", Arial, sans-serif;
 	/* Fall back fonts separated by commas ends with semi-colon. */
 	font-weight: bold;
