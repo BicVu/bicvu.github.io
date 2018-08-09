@@ -1,6 +1,6 @@
 @font-face {
     src: url('fonts/MapRoman-Condensed.woff2') format("woff2"),
-         url('fonts/MapRoman-Condensed.woff') format("woff");;
+         url('fonts/MapRoman-Condensed.woff') format("woff");
     font-family: 'MapRomanWeb-Condensed';
 	/* Fall back fonts separated by commas ends with semi-colon. */
 	font-weight: normal;
