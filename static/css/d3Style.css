@@ -23,9 +23,9 @@
     cursor: pointer;
 }
 
-.popover {
+/* .popover {
     pointer-events: none !important;
-}
+} */
 
 
 /* font size dependent on radius, see app.js */
