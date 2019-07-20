@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- YOU ARE HERE: static/templates/health.html -->
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://use.typekit.net/fwf7daa.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/d3style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+  <!-- Leaflet CSS & JS for Map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- D3 for Map-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script> -->
+  <!-- D3 for chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+  <title>Obesity Data Visualization</title>
+</head>
+
+
+<body>
+  <!-- Nav start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">Obesity Data Analysis</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+    </button>
+  </nav>
+  <!-- Nav end -->
+
+  <!-- Tab start -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a id="main" class="nav-link" data-toggle="tab" href="index.html">Overall</a>
+    </li>
+    <!-- HEALTH TAB IS ACTIVE -->
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="health.html">Health</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="nutrition.html">Nutrition</a>
+    </li>
+  </ul>
+  <!-- Tab end -->
+
+  <div class="container">
+
+    <br>
+    <br>
+    <h2>State of Inactivity</h2>
+    <p>Diabetes and hypertension are health risks commonly associated with a lack of exercise. We looked at <a href="https://chronicdata.cdc.gov/Behavioral-Risk-Factors/Behavioral-Risk-Factor-Surveillance-System-BRFSS-P/dttw-5yxu/data">Behavioral Risk Factor Surveillance System  (BRFSS)</a> gathered by the U.S. Center For Disease Control (CDC) in 2017 to visualize patterns of obesity and health conditions. Survey results on inactive results shows an reverse correlation with levels of obesity; states a large percentage of obese population also ranked high in numbers of correspondents who reported not participating in physical activities.* West Virginia has the highest percentage of obese populations and also ranked top in percentage of the population with obesity, hypertension and report of inactivity. </p>
+    <br>
+    <br>
+
+    <div id="map"></div>
+    <br>
+    <p class="col-lg-8" style="font-size: 0.9em;"><strong><a href="https://www.cdc.gov/physicalactivity/inactivity-among-adults-50plus/mmwr-data-highlights.html">* Inactivity is defined by the CDC</a></strong> as responding “No” to the following question: “During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?”</p>
+    <br>
+    <br>
+    <br>
+    <div id="chart1" class="chart" style="padding:0%;"></div>
+    <!-- <caption>
+      Data source
+    </caption> -->
+    <br>
+
+    <br>
+    
+  </div>
+
+  
+  <!-- Data for Health Chart -->
+  <script src="../static/data/data_Health.js"></script>
+  <!-- Health Chart -->
+  <script src="../static/js/Chart_Health/Inactivity_Interactive.js"></script>
+
+  <!-- Link to Obesity Map JS -->
+  <script type="text/javascript" src="../static/js/Map_Health/config.js"></script>
+  <script type="text/javascript" src="../static/js/Map_Health/geojson_inactivity.js"></script>
+  <script type="text/javascript" src="../static/js/Map_Health/logic_map_health.js"></script>
+
+</body>
+
+<footer>
+  <p style="font-size:.75em; color:#808080; text-align: center">Design & Developed by Carol Fogel, Monica L. and Bic Vu,
+    2019.</p>
+  <br>
+</footer>
+
+</html>
